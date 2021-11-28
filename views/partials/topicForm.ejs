@@ -1,0 +1,33 @@
+<form action="/topics" method="post">
+  <div
+    class="container mt-5 text-center border border-3 rounded p-4"
+    style="min-width: 500"
+  >
+    <h3>ADD A NEW TOPIC</h3>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Enter Title Here"
+        ,
+        name="topicTitle"
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control"
+        rows="4"
+        ,
+        placeholder="Add Description Here"
+        ,
+        name="description"
+      ></textarea>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-dark" type="submit">ADD TOPIC</button>
+      <a class="btn btn-secondary" type="button" href="/topics">CANCEL</a>
+    </div>
+  </div>
+</form>

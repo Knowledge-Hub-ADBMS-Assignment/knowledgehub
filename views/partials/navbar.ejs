@@ -1,0 +1,70 @@
+<nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 84 84"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M24.29 49.126C23.4745 51.31 22.785 53.326 22.169 55.3665C25.529 52.927 29.5225 51.38 34.132 50.8025C42.9275 49.7035 50.743 43.897 54.698 36.5995L49.602 31.507L54.5475 26.5545L58.0475 23.051C59.5525 21.546 61.25 18.767 63.0455 14.763C43.47 17.7975 31.4825 29.785 24.2865 49.126H24.29ZM59.5 31.5035L63 35C59.5 45.5 49 56 35 57.75C25.6585 58.919 19.824 65.3345 17.493 77H10.5C14 56 21 7 73.5 7C70 17.4895 66.507 24.486 63.0105 27.9895L59.5 31.5035Z"
+        fill="white"
+      />
+    </svg>
+    <a class="navbar-brand" href="/">KNOWKEDGE HUB</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/topics" tabindex="-1" aria-disabled="true"
+            >Topic</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex mx-auto">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success me-2" type="submit">
+          Search
+        </button>
+      </form>
+      <h4 class="text-light mt-3 me-2 pb-2"><a href="/user/profile/<%= user._id %>" style="text-decoration: none; color: white;"><%= user.userName %></a></h3>  
+      <a href="/logout">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 60 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M30 55C16.1925 55 5 43.8075 5 30C5 16.1925 16.1925 5 30 5C33.8816 4.99708 37.7105 5.89943 41.1823 7.63535C44.6542 9.37128 47.6733 11.8929 50 15H43.225C40.3381 12.4544 36.7779 10.7959 32.9718 10.2235C29.1656 9.6511 25.2752 10.1891 21.7672 11.773C18.2593 13.3569 15.2829 15.9194 13.1952 19.153C11.1075 22.3865 9.99717 26.1538 9.99749 30.0028C9.99781 33.8517 11.1087 37.6188 13.197 40.852C15.2852 44.0853 18.262 46.6472 21.7703 48.2305C25.2785 49.8139 29.169 50.3512 32.9751 49.7782C36.7811 49.2052 40.341 47.5461 43.2275 45H50.0025C47.6756 48.1074 44.656 50.6293 41.1837 52.3652C37.7114 54.1011 33.8821 55.0033 30 55V55ZM47.5 40V32.5H27.5V27.5H47.5V20L60 30L47.5 40Z"
+            fill="#F8F8F8"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>

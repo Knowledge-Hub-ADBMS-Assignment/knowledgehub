@@ -1,0 +1,38 @@
+<div class="container-fluid p-0">
+      <div class="row text-center position-relative">
+        <div
+          class="bg-secondary min-vw-100 overflow-visible"
+          style="height: 500px"
+        >
+        <% if(ownprofile) { %>
+          <div class="btn-group position-absolute top-0 end-0 mt-3 me-3" role="group" aria-label="Basic mixed styles example">
+            <a href="/profileupdateform" class="me-3"><button type="button" class="btn btn-success">Update Profile</button></a>
+            <a href="/user/reset/password" class="me-3"><button type="button" class="btn btn-warning">Reset Password</button></a>
+            <a href="/user/delete" class="me-3"><button type="button" class="btn btn-danger">Delete Account</button></a>
+          </div>
+        <% } %>
+        </div>
+        <div class="min-vw-100 overflow-visible" style="height: 100px">
+          <br /><br /><br /><br />
+          <h1 class="mt-2"><strong><%= profileUser.firstName + " " + profileUser.lastName %></strong></h1>
+        </div>
+        <div class="position-absolute bottom-0">
+          <svg
+            width="224"
+            height="224"
+            viewBox="0 0 224 224"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M112 56C105.078 56 98.3108 58.0527 92.5551 61.8986C86.7993 65.7444 82.3133 71.2107 79.6642 77.6061C77.0152 84.0015 76.322 91.0388 77.6725 97.8282C79.023 104.618 82.3564 110.854 87.2513 115.749C92.1461 120.644 98.3825 123.977 105.172 125.327C111.961 126.678 118.999 125.985 125.394 123.336C131.789 120.687 137.256 116.201 141.101 110.445C144.947 104.689 147 97.9224 147 91C147 81.7174 143.313 72.815 136.749 66.2513C130.185 59.6875 121.283 56 112 56Z"
+              fill="black"
+            />
+            <path
+              d="M112 14C92.6175 14 73.6702 19.7476 57.5542 30.516C41.4381 41.2844 28.8772 56.5899 21.4598 74.497C14.0425 92.4042 12.1017 112.109 15.8831 131.119C19.6644 150.129 28.998 167.591 42.7036 181.296C56.4091 195.002 73.8711 204.336 92.8812 208.117C111.891 211.898 131.596 209.958 149.503 202.54C167.41 195.123 182.716 182.562 193.484 166.446C204.252 150.33 210 131.383 210 112C209.97 86.0179 199.636 61.1084 181.264 42.7363C162.892 24.3641 137.982 14.0296 112 14V14ZM167.944 174.482C167.805 165.3 164.064 156.541 157.527 150.091C150.991 143.641 142.183 140.017 133 140H91C81.8173 140.017 73.0089 143.641 66.4727 150.091C59.9364 156.541 56.1956 165.3 56.056 174.482C43.362 163.147 34.4102 148.224 30.3859 131.689C26.3616 115.153 27.4547 97.7854 33.5205 81.885C39.5863 65.9846 50.3386 52.3017 64.3536 42.648C78.3687 32.9943 94.9854 27.8252 112.004 27.8252C129.022 27.8252 145.638 32.9943 159.653 42.648C173.669 52.3017 184.421 65.9846 190.487 81.885C196.552 97.7854 197.645 115.153 193.621 131.689C189.597 148.224 180.645 163.147 167.951 174.482H167.944Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>

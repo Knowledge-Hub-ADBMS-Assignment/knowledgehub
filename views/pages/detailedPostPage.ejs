@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head'); %>
+  <body>
+    <%- include('../partials/navbar', {user}); %> <br><br><br>
+    <%- include('../partials/detailedPost', { post, isMyPost }); %>
+    <%- include('../partials/footer'); %>
+  </body>
+</html>

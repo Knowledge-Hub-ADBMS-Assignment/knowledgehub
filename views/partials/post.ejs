@@ -1,0 +1,44 @@
+<div class="container border p-4 mt-3 border-3 rounded">
+  <div class="row">
+    <div class="col-2 col-md-1 d-flex justify-content-center">
+      <a href="/user/profile/<%= post.author._id %>" style="text-decoration: none; color: black;">
+      <svg
+        width="50"
+        height="58"
+        viewBox="0 0 50 58"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="m-auto"
+      >
+        <path
+          d="M35.6473 35.7812L25 46.4286L14.3527 35.7812C6.37277 36.1272 0 42.6562 0 50.7143V51.7857C0 54.7433 2.39955 57.1428 5.35714 57.1428H44.6429C47.6004 57.1428 50 54.7433 50 51.7857V50.7143C50 42.6562 43.6272 36.1272 35.6473 35.7812V35.7812ZM1.51786 8.90623L2.23214 9.07364V15.5915C1.45089 16.0602 0.892857 16.875 0.892857 17.8571C0.892857 18.7946 1.40625 19.5759 2.1317 20.0558L0.390625 27.0089C0.200893 27.779 0.625 28.5714 1.23884 28.5714H5.90402C6.51786 28.5714 6.94196 27.779 6.75223 27.0089L5.01116 20.0558C5.73661 19.5759 6.25 18.7946 6.25 17.8571C6.25 16.875 5.69196 16.0602 4.91071 15.5915V9.72096L12.2768 11.4955C11.317 13.4152 10.7143 15.558 10.7143 17.8571C10.7143 25.7477 17.1094 32.1428 25 32.1428C32.8906 32.1428 39.2857 25.7477 39.2857 17.8571C39.2857 15.558 38.6942 13.4152 37.7232 11.4955L48.471 8.90623C50.5022 8.41516 50.5022 5.88168 48.471 5.39061L27.221 0.256679C25.7701 -0.0893032 24.2411 -0.0893032 22.7902 0.256679L1.51786 5.37945C-0.502232 5.87052 -0.502232 8.41516 1.51786 8.90623V8.90623Z"
+          fill="black"
+        />
+      </svg>
+      </a>
+    </div>
+    <div class="col-6 col-md-7 pt-2">
+      <div class="row text-bold">
+        <strong>
+          <a href="/user/profile/<%= post.author._id %>" style="text-decoration: none; color: black;">
+          <%= post.author.firstName %> <%= post.author.lastName %>
+          </a>
+        </strong>
+      </div>
+      <div class="row text-muted">
+        <small><%= post.created %></small>
+      </div>
+    </div>
+    <div class="col-4 position-relative">
+      <div class="btn btn-secondary position-absolute end-0 mt-2" style="background-color: <%= post.topic.uiColor %>;">
+        <%= post.topic.topicTitle %>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <h3 class="text-center text-decoration-underline"><%= post.title %></h3>
+  </div>
+  <div class="row mt-3">
+    <p class="text-justify" style="text-align: justify;"><%= post.truncated_body %> <span><a href="/posts/<%= post._id %>" class="text-decoration-none text-success">read more...</a></span></p>
+  </div>
+</div>

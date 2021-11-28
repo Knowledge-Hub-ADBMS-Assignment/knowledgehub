@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head'); %>
+  <body>
+    <div class="container mt-5">
+      <% buttons.forEach((color) => { %>
+      <div class="btn btn-secondary" style="background-color: <%= color %>;">
+        Click
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

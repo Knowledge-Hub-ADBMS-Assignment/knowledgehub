@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head'); %>
+  <body>
+    <% if(newUser) { %>
+    <div class="container my-4">
+      <div class="alert alert-success">
+        Hello <strong><%= lastName %>, </strong> <%= message %>. Please login.
+      </div>
+    </div>
+    <% } %> <% if(failure) { %>
+    <div class="container my-4">
+      <div class="alert alert-danger">
+        <strong>Warning!</strong> login failed. Try again.
+        <a href="/" class="alert-link">go to home page</a>.
+      </div>
+    </div>
+    <% } %>
+
+    <div class="container mt-5 p-4 border rounded" style="width: 500px">
+      <svg
+        width="84"
+        height="84"
+        viewBox="0 0 84 84"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        ,
+        class="m-auto mb-1"
+        ,
+        style="display: block"
+      >
+        <path
+          d="M24.29 49.126C23.4745 51.31 22.785 53.326 22.169 55.3665C25.529 52.927 29.5225 51.38 34.132 50.8025C42.9275 49.7035 50.743 43.897 54.698 36.5995L49.602 31.507L54.5475 26.5545L58.0475 23.051C59.5525 21.546 61.25 18.767 63.0455 14.763C43.47 17.7975 31.4825 29.785 24.2865 49.126H24.29ZM59.5 31.5035L63 35C59.5 45.5 49 56 35 57.75C25.6585 58.919 19.824 65.3345 17.493 77H10.5C14 56 21 7 73.5 7C70 17.4895 66.507 24.486 63.0105 27.9895L59.5 31.5035Z"
+          fill="black"
+        />
+      </svg>
+
+      <div class="text-center">
+        <h2>LOGIN</h2>
+      </div>
+      <form action="/login" method="post">
+        <div class="mb-3 mt-3">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="pwd">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            placeholder="Enter password"
+            name="pswd"
+          />
+        </div>
+        <div class="text-center">
+          <a class="link-primary" style="text-decoration: none" href="/register"
+            >Create Account</a
+          >
+        </div>
+        <div class="text-center mt-3">
+          <button type="submit" onclick="login()" class="btn btn-primary me-3">
+            Login
+          </button>
+          <a href="/cancel" id="cancel" name="cancel" class="btn btn-secondary"
+            >Cancel</a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

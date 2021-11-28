@@ -1,0 +1,16 @@
+<div class="container-fluid">
+      <div class="row bg-secondary text-light text-center p-5">
+        <h1><%= topic.topicTitle %> </h1>
+
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <p class="mx-5">
+              <%= topic.description %>
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer" style="color: white;">
+            created By <cite title="Source Title"><a href="#" style="text-decoration: none; color: white;"><%= topic.createdBy.firstName + " " + topic.createdBy.lastName %></a></cite>
+          </figcaption>
+        </figure>
+      </div>
+</div>

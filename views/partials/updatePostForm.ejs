@@ -1,0 +1,60 @@
+<form action="/posts/update/<%= post._id %>" method="post">
+  <div
+    class="container mt-5 text-center border border-3 rounded p-4"
+    style="min-width: 500"
+  >
+    <h3>Update Post</h3>
+    
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Enter Title Here",
+        name="title",
+        value= '<%= post.title %>'
+      >
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control"
+        rows="8"
+        ,
+        placeholder="Add Discription here"
+        ,
+        name="body"=
+      ><%= post.body %></textarea>
+    </div>
+    <select
+      class="form-select form-select-md mb-3"
+      aria-label=".form-select-lg example"
+      name="topic"
+    >
+
+      <% topics.forEach((topic) => { %>
+        <% if(topic._id.equals(post.topic._id)) { %>
+            <option selected value=<%= topic._id %>><%= topic.topicTitle %></option>
+            <% return; %>
+        <% } %>
+      <option value=<%= topic._id %>><%= topic.topicTitle %></option>
+      <% }) %>
+    </select>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-dark end-0" type="submit">
+        <svg
+          width="21"
+          height="21"
+          viewBox="0 0 21 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.962 3.171L12.873 1.26L19.551 7.9275L17.6295 9.8385C17.0792 9.48308 16.4239 9.32676 15.7725 9.39553C15.1211 9.4643 14.5128 9.75402 14.049 10.2165L13.2615 11.004C12.2955 11.9805 12.1695 13.4715 12.894 14.5845L10.9725 16.4955L8.44197 13.965L5.50197 16.8945C5.06097 17.3355 1.95297 19.74 1.51197 19.299C1.07097 18.858 3.46497 15.7395 3.90597 15.2985L6.83547 12.369L4.30497 9.828L6.22647 7.917C7.32897 8.6415 8.83047 8.5155 9.79647 7.539L10.584 6.7515C11.5605 5.7855 11.6865 4.284 10.962 3.171Z"
+            fill="white"
+          />
+        </svg>
+        Post
+      </button>
+    </div>
+  </div>
+</form>
